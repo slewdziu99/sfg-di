@@ -3,7 +3,7 @@ package pl.adma.guru.springframework.sfgdi.sfgdi.controllers;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import pl.adma.guru.springframework.sfgdi.sfgdi.services.GreetingServiceImpl;
+import pl.adma.guru.springframework.sfgdi.sfgdi.services.ContructorGreetingService;
 
 class PropertyInjectedControllerTest {
 	
@@ -12,7 +12,7 @@ class PropertyInjectedControllerTest {
 	@BeforeEach
 	void setUp() {
 		controller = new PropertyInjectedController();
-		controller.greetingService = new GreetingServiceImpl();
+		controller.greetingService = new ContructorGreetingService();
 	}
 
 	@Test

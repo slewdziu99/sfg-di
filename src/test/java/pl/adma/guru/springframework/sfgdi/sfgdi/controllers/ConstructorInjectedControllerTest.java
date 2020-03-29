@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import pl.adma.guru.springframework.sfgdi.sfgdi.services.GreetingServiceImpl;
+import pl.adma.guru.springframework.sfgdi.sfgdi.services.ContructorGreetingService;
 
 class ConstructorInjectedControllerTest {
 	
@@ -13,7 +13,7 @@ class ConstructorInjectedControllerTest {
 
 	@BeforeEach
 	void setUp() {
-		controller = new ConstructorInjectedController(new GreetingServiceImpl());
+		controller = new ConstructorInjectedController(new ContructorGreetingService());
 	}
 	
 	@Test

@@ -1,21 +1,19 @@
 package pl.adma.guru.springframework.sfgdi.sfgdi.controllers;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 import pl.adma.guru.springframework.sfgdi.sfgdi.services.GreetingService;
 
 @Controller
-public class ConstructorInjectedController {
+public class I18nController {
 	
 	private final GreetingService greetingService;
 
-	// Autowired annotation is optional on constructor
-	public ConstructorInjectedController(@Qualifier("contructorGreetingService") GreetingService greetingService) {
+	public I18nController(GreetingService greetingService) {
 		this.greetingService = greetingService;
 	}
-
-	public String getGreeting() {
+	
+	public String seyHello() {
 		return greetingService.sayGreeting();
 	}
 
